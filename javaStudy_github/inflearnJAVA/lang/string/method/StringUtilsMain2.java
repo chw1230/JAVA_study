@@ -1,0 +1,24 @@
+package lang.string.method;
+
+public class StringUtilsMain2 {
+    public static void main(String[] args) {
+        int num = 100;
+        boolean bool = true;
+        String str = "Hello, Java!";
+
+        // format 메서드
+        String format1 = String.format("num: %d, bool: %b, str: %s", num, bool, str);
+        System.out.println(format1);
+
+        String s = String.format("숫자: %.2f", 10.1234);
+        System.out.println(s);
+
+        // printf
+        System.out.printf("숫자: %.3f\n", 10.1234);
+
+        // matches 메서드 -> 참고만 하세용
+        // "Hello, Java!"
+        String regex = "Hello, (Java!|World)"; // Hello, 로 시작해서 뒷부분이 자바이거나 월드 인가? 믈어보는거 임!
+        System.out.println("'str'이 패턴과 일치하는가?"+str.matches(regex));
+    }
+}
