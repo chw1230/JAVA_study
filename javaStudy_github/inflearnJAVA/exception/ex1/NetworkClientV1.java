@@ -37,7 +37,7 @@ public class NetworkClientV1 {
         return;
     }
 
-    public void intiError(String data) {
+    public void initError(String data) {
         if (data.contains("error1")) { // data에 error1이라는 단어가 있으면
             connectError = true;
         }
