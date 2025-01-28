@@ -4,7 +4,7 @@ public class BoxMain1 {
 
     public static void main(String[] args) {
         IntegerBox integerBox = new IntegerBox();
-        integerBox.ser(10); // 오토 박싱 사용
+        integerBox.set(10); // 오토 박싱 사용
         Integer integer = integerBox.get();
         System.out.println("integer = " + integer);
 
