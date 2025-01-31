@@ -28,9 +28,7 @@ public class AnimalHospitalMainV3 {
 
         // 문제 2 : 개 타입 반환
         dogHospital.set(dog);
-        Dog biggerDog = dogHospital.bigger(new Dog("멍멍이2", 200)); // Animal 타입을 반환하기 때문에 다운 캐스팅을 해야한다.
+        Dog biggerDog = dogHospital.bigger(new Dog("멍멍이2", 200));
         System.out.println("biggerDog = " + biggerDog);
-        // 비교 과정에서  dogHospital.set(cat) 을 했을 때 고양이와 멍멍이2 중 고양이가 더 큰 경우라면
-        // dogHospital.bigger(new Dog("멍멍이2", 200))에 대한 결과가 cat이 나오게 된다! 하지만 이 cat을 (Dog)로 다운 캐스팅 할 수 없기 때문에 오류가 발생하게 된다!!
     }
 }
