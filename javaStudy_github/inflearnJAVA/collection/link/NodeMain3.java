@@ -45,13 +45,10 @@ public class NodeMain3 {
 
     private static Node getLastNode(Node node) {
         Node x = node;
-        while (x != null) {  // 나의 다음이 null 인 경우 반복문 실행 안함!
-            if(x.next == null){
-                return x;
-            }
+        while (x.next != null) {
             x = x.next;
         }
-        return null;
+        return x;
     }
 
     private static Node getNode(Node node, int index) {
