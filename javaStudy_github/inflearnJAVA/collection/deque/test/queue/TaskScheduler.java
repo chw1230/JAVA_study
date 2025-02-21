@@ -17,7 +17,11 @@ public class TaskScheduler {
         return deque.size();
     }
 
+    // 코드 리펙토링
     public void processNextTask() {
-        deque.poll().execute();
+        Task task = deque.poll();
+        if (task != null) {
+            task.execute();
+        }
     }
 }

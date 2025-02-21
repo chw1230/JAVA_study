@@ -28,6 +28,8 @@ public class Product {
                 '}';
     }
 
+    // 기본 객체를 사용하는 것이 아니라 Product 라는 객체를 사용하기에 직접 오버라이딩 해서 재정의 해줘야함!!!
+    // 중복 체크를 위해서!!!!!!! 필요함!!!!!!!
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

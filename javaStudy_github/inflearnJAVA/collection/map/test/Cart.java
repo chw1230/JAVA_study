@@ -9,22 +9,18 @@ public class Cart {
 
     // 장바구니 추가
     public void add(Product product, int ea) {
-        if (cartMap.containsKey(product)) {
-            Integer cnt = cartMap.get(product);
-            cnt += ea;
-            cartMap.put(product, cnt);
-        }else {
-            cartMap.put(product, ea);
-        }
+        // 코드 리펙토링!!!!!
+        cartMap.put(product, cartMap.getOrDefault(product, 0) + ea);
     }
 
     // 장바구니 제거
     public void minus(Product product, int ea) {
-        Integer cnt = cartMap.get(product);
-        cnt -= ea;
-        cartMap.put(product, cnt);
-        if (cnt <= 0) {
+        // 코드 리펙토링!!!!!
+        Integer cnt = cartMap.getOrDefault(product, 0);
+        if (cnt - ea <= 0) {
             cartMap.remove(product);
+        }else{
+            cartMap.put(product, cnt - ea);
         }
     }
 
