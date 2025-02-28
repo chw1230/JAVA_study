@@ -27,7 +27,7 @@ public class Deck {
     }
 
     public Card drawCard() {
-        return cards.removeFirst(); // 첫 번쨰 꺼내기
+        return cards.removeFirst(); // 첫 번째 꺼내기
     }
 
 

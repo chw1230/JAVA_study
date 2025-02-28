@@ -1,7 +1,7 @@
-package collection.compare.test;
+package collection.compare.testPractice;
+
 
 public class CardGameMain {
-
     public static void main(String[] args) {
         Deck deck = new Deck();
         Player player1 = new Player("플레이어1");
@@ -20,10 +20,11 @@ public class CardGameMain {
 
         if (winner != null) {
             System.out.println(winner.getName() + "승리");
-        }else {
+        } else {
             System.out.println("무승부");
         }
     }
+
 
     private static Player getWinner(Player player1, Player player2) {
         int sum1 = player1.rankSum();
