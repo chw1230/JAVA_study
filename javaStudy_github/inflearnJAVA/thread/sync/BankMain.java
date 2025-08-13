@@ -7,7 +7,8 @@ public class BankMain {
 
     public static void main(String[] args) throws InterruptedException {
 //        BankAccount account = new BankAccountV1(1000);
-        BankAccount account = new BankAccountV2(1000); // 동기화 적용한 것!
+//        BankAccount account = new BankAccountV2(1000); // 동기화 적용한 것!
+        BankAccount account = new BankAccountV3(1000); // 동기화 적용 ( 특정 코드 블럭에 적용 )
         // 계좌에 1000원 있는 데 동시에 출력!
         Thread t1 = new Thread(new WithdrawTask(account, 800), "t1");
         Thread t2 = new Thread(new WithdrawTask(account, 800), "t2");
