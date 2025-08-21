@@ -13,12 +13,12 @@ public class BoundedMain {
         // 1. BoundedQueue 선택
 //        BoundedQueue queue = new BoundedQueueV1(2); // V1의 문제 -> 소비와 생산에서 공통적인? 대칭적인? 문제 발생
 //        BoundedQueue queue = new BoundedQueueV2(2); // V2의 문제 -> synchronized의 락으로 인한 문제
-        BoundedQueue queue = new BoundedQueueV3(2);
+        BoundedQueue queue = new BoundedQueueV3(2); // V3의 문제 -> notify( )의 비효율의 아쉬운 점 존재
 
 
         // 2. 생산자, 소비자 실행 순서 선택, 반드시 하나만 선택!
-//        producerFirst(queue); // 생산자 먼저 실행
-        consumerFirst(queue); // 소비자 먼저 실행
+        producerFirst(queue); // 생산자 먼저 실행
+//        consumerFirst(queue); // 소비자 먼저 실행
     }
 
     private static void producerFirst(BoundedQueue queue) {
