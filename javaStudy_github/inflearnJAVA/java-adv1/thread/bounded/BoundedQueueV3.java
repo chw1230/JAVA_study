@@ -49,13 +49,7 @@ public class BoundedQueueV3 implements BoundedQueue {
         return data;
     }
 
-    @Override
-    public String toString() {
-        return queue.toString();
-    }
-}
-
-/*
+    /*
     wait() - 현재 스레드가 가진 락을 다른 스레드가 획득 할 수 있도록 반납하고 대기(WAITING) 하기 다른 스레드가 notify()나 notifyAll() 호출할 때까지 대기
     notify() - 대기 중인 스레드 중 하나를 깨우기, 여러개 라면 여러개 중 무작위 하나 / 깨운 스레드는 락을 다시 획득할 수 있음
 
@@ -70,4 +64,10 @@ public class BoundedQueueV3 implements BoundedQueue {
     -> 깨어난 스레드는 락을 얻기 위해 임계영역에서 BLOCKED으로 있으며 락을 얻게된다.
     -> 이때 같은 종류의 스레드라면 다시 스레드 대기 집합으로 이동할 것 이고, 다른 스레드면 락을 획득하게 될 것
     => notifyAll() - 스레드 기아를 막을 수 있지만, 비효율 문제를 막을 수 없음!
-*/
+     */
+
+    @Override
+    public String toString() {
+        return queue.toString();
+    }
+}
